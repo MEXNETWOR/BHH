@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BLACK HAT HACKING</title>
+  <style>
+    body {
+      background-color: #000;
+      color: red;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      box-shadow: 0 0 10px red;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red; }
+      20% { text-shadow: -2px 0 cyan; }
+      40% { text-shadow: 2px 2px lime; }
+      60% { text-shadow: -2px -2px blue; }
+      80% { text-shadow: 2px -2px magenta; }
+      100% { text-shadow: 0 0 red; }
+    }
+
+    .terminal {
+      margin: 20px;
+      padding: 20px;
+      background: #111;
+      border: 1px solid red;
+      height: 200px;
+      overflow: hidden;
+      white-space: pre-wrap;
+      font-size: 1em;
+      box-shadow: 0 0 10px red;
+    }
+
+    .order-bar {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      background: #111;
+      color: red;
+      border: 1px solid red;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: red;
+      color: black;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.8em;
+      color: #777;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🕷️ BLACK HAT HACKING</h1>
+  </header>
+
+  <div class="terminal" id="terminal"></div>
+
+  <div class="order-bar">
+    <form action="https://formspree.io/f/mdkggjdv" method="POST">
+      <input type="text" name="order" placeholder="Request anything..." required>
+      <input type="email" name="email" placeholder="Your email..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>☠️ All actions are monitored. Be careful what you wish for.</footer>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/hq68y2.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const terminal = document.getElementById('terminal');
+    const lines = [
+      "[BOOT] Initializing Black Hat Terminal...",
+      "[OK] Dark Web Connection Established",
+      "[ACCESS] Anonymous mode: ENABLED",
+      "[LOG] Awaiting user input...",
+      "███ HACK THE SYSTEM ███",
+      "You may now request your tools below..."
+    ];
+    let i = 0;
+
+    function typeLine() {
+      if (i < lines.length) {
+        terminal.innerHTML += lines[i] + '\n';
+        i++;
+        setTimeout(typeLine, 1000);
+      }
+    }
+
+    typeLine();
+  </script>
+
+</body>
+</html>
